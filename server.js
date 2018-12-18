@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 
 const items = require('./routes/api/items');
@@ -12,7 +13,6 @@ app.use(express.json());
 
 //DB config -- pointint to the keys in config folder
 const db = require('./config/keys').mongoURI;
-const path = require('path');
 
 //connect to Mongo
 mongoose
